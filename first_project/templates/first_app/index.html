@@ -1,0 +1,39 @@
+{% load static %} <!-- load dulu -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <div class="content-wrapper" style="padding-bottom: 10rem;">
+        <h1>{{content}}</h1>
+        <img src="{% static 'images/red-larva.png' %}" alt=""> <!-- ambil imagesnya -->
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>WebPage</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if webpage %}
+                {% for web in webpage %}
+                <tr>
+                    <td>{{web.name}}</td>
+                    <td>{{web.date}}</td>
+                </tr>
+                {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
