@@ -1,0 +1,10 @@
+{% extends "./base.html" %}
+{% load custom_filter %}
+
+{% block template_content %}
+<div class="content-wrapper px-5 mt-5">
+    <h1>ini adalah index</h1>
+    <h3>Data Context Name : {{name | custom_cut:"hello" }}</h3>
+    <h3>Data Context Number : {{number}}</h3>
+</div>
+{% endblock %}
